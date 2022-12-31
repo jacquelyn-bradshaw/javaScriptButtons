@@ -1,10 +1,7 @@
 // Practice what you learned!
-
 // 1) Select the two <button> elements and store them in two different variables.
 //    - Select the first button without adding or using any "id"
-let removeParagraphButton = document.querySelector("button");
 //    - Select the second button by using an "id"
-let addColourButton = document.getElementById("paragraph-colour-button");
 // 2) Add "click" event listener to both buttons (with two different functions).
 //    The functions should "console.dir()" the clicked buttons.
 //    - Output the first button by using the variable in which it's stored
@@ -19,3 +16,14 @@ let addColourButton = document.getElementById("paragraph-colour-button");
 //    - The second button changes the background color of the first paragraph to blue
 // 5) Solve (4) both by changing the "inline styles" as well as by adding CSS classes
 //    Note: You'll have to add those classes to the styles.css file first!
+
+let removeParagraphButton = document.querySelector("button");
+let addColourButton = document.getElementById("paragraph-colour-button");
+function removeParagraph() {
+  console.dir(removeParagraphButton);
+}
+function addBackgroundColour(event) {
+  console.dir(event.target);
+}
+removeParagraphButton.addEventListener("click", removeParagraph);
+addColourButton.addEventListener("click", addBackgroundColour);
