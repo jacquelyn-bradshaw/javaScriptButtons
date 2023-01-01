@@ -19,6 +19,9 @@
 
 let removeParagraphButton = document.querySelector("button");
 let addColourButton = document.getElementById("paragraph-colour-button");
+let firstParagraph = document.body.children[2].children[1];
+let thirdParagraph = document.body.children[2].children[3];
+
 function removeParagraph() {
   console.dir(removeParagraphButton);
 }
