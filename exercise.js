@@ -17,16 +17,19 @@
 // 5) Solve (4) both by changing the "inline styles" as well as by adding CSS classes
 //    Note: You'll have to add those classes to the styles.css file first!
 
-let removeParagraphButton = document.querySelector("button");
-let addColourButton = document.getElementById("paragraph-colour-button");
-let firstParagraph = document.body.children[2].children[1];
-let thirdParagraph = document.body.children[2].children[3];
+const removeParagraphButton = document.querySelector("button");
+const addColourButton = document.getElementById("paragraph-colour-button");
+const firstParagraph = document.body.children[2].children[1];
+const thirdParagraph = document.body.children[2].children[3];
 
 function removeParagraph() {
-  console.dir(removeParagraphButton);
+  //console.dir(removeParagraphButton);
+  thirdParagraph.remove();
 }
-function addBackgroundColour(event) {
-  console.dir(event.target);
+function addBackgroundColour() {
+  //console.dir(event.target);
+  firstParagraph.classList.add("blue-background");
+  //firstParagraph.style.backgroundColor = "blue";
 }
 removeParagraphButton.addEventListener("click", removeParagraph);
 addColourButton.addEventListener("click", addBackgroundColour);
